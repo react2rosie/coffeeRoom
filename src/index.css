@@ -1,0 +1,10 @@
+@import "@flaticon/flaticon-uicons/css/all/all";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  color: #30241f;
+}

@@ -1,0 +1,10 @@
+@import "../../vars.css";
+.single {
+  display: flex;
+  gap: 100px;
+}
+@media screen and (max-width: 830px) {
+  .single {
+    gap: 20px;
+  }
+}

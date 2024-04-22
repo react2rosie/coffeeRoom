@@ -1,0 +1,84 @@
+@import "../../vars.css";
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("/assets/blog/blog3.png") no-repeat;
+  background-size: cover;
+  h5 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 50px;
+    margin-right: 400px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 5px 10px;
+    background-color: rgba(240, 128, 128, 0.8);
+    border: 2px solid rgba(240, 128, 128, 0.8);
+    max-width: fit-content;
+    border-radius: 5px;
+    color: var(--color-pink);
+    i {
+      margin-top: 5px;
+      padding-left: 8px;
+    }
+  }
+  h5:hover {
+    background-color: rgba(240, 128, 128, 1);
+    border: 2px solid rgba(240, 128, 128, 1);
+  }
+}
+.logItems {
+  margin-bottom: 40px;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0 50px 0;
+  align-items: center;
+  label {
+    width: 21%;
+    margin-bottom: 7px;
+  }
+  h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #3e3e3e;
+  }
+  input {
+    margin-bottom: 40px;
+    padding: 10px;
+    width: 20%;
+    font-size: 15px;
+    border: 2px solid var(--color-dbrown);
+    border-radius: 10px;
+  }
+  input:focus {
+    outline: none;
+  }
+  button {
+    margin-bottom: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px 0px;
+    background-color: rgba(34, 187, 128, 0.8);
+    cursor: pointer;
+    color: var(--color-pink);
+    border: 2px solid rgba(34, 187, 128, 0.8);
+    letter-spacing: 1px;
+    width: 22%;
+  }
+  button:active {
+    color: var(--color-dbrown);
+  }
+  button:hover {
+    background-color: rgba(34, 187, 128, 1);
+    border: 2px solid rgba(34, 187, 128, 1);
+  }
+}

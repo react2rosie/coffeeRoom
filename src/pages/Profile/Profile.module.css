@@ -1,0 +1,156 @@
+@import "../../vars.css";
+.menuwrap {
+  height: calc(150vh - 50px);
+  display: grid;
+  grid-template-areas: "menu main main main main main main";
+}
+.menu {
+  grid-area: menu;
+  background-color: var(--color-pink);
+  padding: 50px 30px 0 50px;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+  ul {
+    a {
+      text-decoration: none;
+      color: var(--color-dark);
+    }
+    a:nth-child(1) li {
+      background-color: white;
+    }
+  }
+  li {
+    margin-bottom: 30px;
+    font-size: 16px;
+    list-style: none;
+    font-weight: 300;
+    max-width: 200px;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    padding: 20px;
+    cursor: pointer;
+    i {
+      margin-right: 20px;
+    }
+  }
+  li:hover {
+    background-color: white;
+  }
+  .leave {
+    color: rgb(213, 0, 0);
+  }
+}
+
+.profile {
+  margin-bottom: 40px;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  align-items: center;
+  label {
+    width: 26%;
+    margin-bottom: 7px;
+  }
+  h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #3e3e3e;
+  }
+  input {
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 25%;
+    font-size: 15px;
+    border: 2px solid rgb(97, 97, 97);
+    border-radius: 10px;
+  }
+  input:focus {
+    outline: none;
+  }
+  button {
+    margin-bottom: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px 0px;
+    background-color: rgba(34, 187, 128, 0.766);
+    cursor: pointer;
+    color: var(--color-pink);
+    border: 2px solid rgba(34, 187, 128, 0.766);
+    letter-spacing: 1px;
+    width: 27%;
+  }
+  button:active {
+    color: var(--color-dbrown);
+  }
+}
+
+.avatar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  img {
+    width: 45%;
+    border-radius: 100%;
+  }
+  label {
+    position: absolute;
+    right: 11%;
+    bottom: 18px;
+    cursor: pointer;
+  }
+
+  i {
+    color: var(--color-dbrown);
+    font-size: 20px;
+    padding: 11px 12px 8px 12px;
+    border-radius: 50px;
+    background-color: var(--color-pink);
+    border: 3px solid var(--color-dbrown);
+  }
+}
+.out {
+  width: 27%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: rgb(213, 0, 0);
+  cursor: pointer;
+  p:hover {
+    font-weight: 600;
+  }
+}
+/* .all {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1px;
+  background-color: blue;
+  height: 100vh;
+} */
+@media screen and (max-width: 830px) {
+  .profile {
+    input {
+      width: 50%;
+    }
+    label {
+      width: 53%;
+    }
+  }
+  .avatar {
+    label {
+      width: fit-content;
+      right: 28%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .profile {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .profile {
+    width: 450px;
+  }
+}

@@ -1,0 +1,127 @@
+@import "../../vars.css";
+.all {
+  display: grid;
+  grid-template-areas: "wrap" "wrap" "wrap" "wrap" "wrap" "footer";
+}
+.menuwrap {
+  height: calc(100vh - 50px);
+  display: grid;
+  grid-area: wrap;
+  grid-template-areas: "menu menu . main main main .";
+}
+.menu {
+  grid-area: menu;
+  background-color: var(--color-pink);
+  padding: 50px 0px 0 50px;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+  ul {
+    a {
+      text-decoration: none;
+      color: var(--color-dark);
+    }
+    a:nth-child(2) li {
+      background-color: white;
+    }
+  }
+  li {
+    margin-bottom: 30px;
+    font-size: 16px;
+    list-style: none;
+    font-weight: 300;
+    max-width: 200px;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    padding: 20px;
+    cursor: pointer;
+    i {
+      margin-right: 20px;
+    }
+  }
+  li:hover {
+    background-color: white;
+  }
+  .leave {
+    color: rgb(213, 0, 0);
+  }
+}
+.dash {
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-pink);
+  margin: 90px 0 0px 50px;
+  border-radius: 10px;
+  grid-area: main;
+  width: max-content;
+  place-self: center;
+  margin-bottom: 190px;
+
+  table {
+    border-spacing: 0px;
+  }
+
+  tr {
+    th,
+    td {
+      width: 120px;
+      text-align: center;
+    }
+  }
+  thead {
+    background-color: var(--color-dark);
+    color: var(--color-pink);
+
+    th {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+    th:first-child {
+      border-top-left-radius: 10px;
+    }
+    th:last-child {
+      border-top-right-radius: 10px;
+    }
+  }
+  tbody {
+    td {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      button {
+        padding: 5px;
+        border-radius: 6px;
+        background-color: var(--color-pink);
+        border-width: 0px;
+      }
+    }
+    .delete {
+      button {
+        color: tomato;
+        cursor: pointer;
+      }
+    }
+    .edit {
+      button {
+        color: rgb(9, 117, 43);
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (max-width: 830px) {
+  .menu {
+    padding-left: 20px;
+  }
+  tr {
+    th,
+    td {
+      width: 20px;
+      padding: 10px;
+      border-right: 2px solid var(--color-dark);
+    }
+    th:last-child,
+    td:last-child {
+      border-right: 0px solid var(--color-dark);
+    }
+  }
+  .dash {
+    margin: 0 50px;
+  }
+}
