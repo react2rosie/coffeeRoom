@@ -146,7 +146,7 @@
 }
 @media screen and (max-width: 600px) {
   .profile {
-    width: 600px;
+    width: 500px;
   }
 }
 @media screen and (max-width: 350px) {
